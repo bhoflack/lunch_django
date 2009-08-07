@@ -1,0 +1,16 @@
+{% if products %}
+  <table>
+    {% for product in products %}
+      <form action="/products/{{ product.id }}/order/" method="post">
+        <tr>
+          <td><input type="text" name="amount"></td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.price }}</td>
+          <td><input type="submit"></td>
+        </tr>
+      </form>
+    {% endfor %}
+  </table>
+{% else %}
+  no products defined!
+{% endif %}
