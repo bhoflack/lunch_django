@@ -15,6 +15,8 @@ class SimpleTest(TestCase):
         """
         self.failUnlessEqual(1 + 1, 2)
 
+class BrowserClient():
+
 
 class AdminDepositsMoneyInUserAccount(TestCase):
 
@@ -25,6 +27,7 @@ class AdminDepositsMoneyInUserAccount(TestCase):
 
     def test_basic_scenario(self):
       self.c.login(username='admin', password='admin')
+
       
 
 
