@@ -27,7 +27,7 @@ class AdminDepositsMoneyInUserAccount(TestCase):
 
     def test_basic_scenario(self):
       self.c.login(username='admin', password='admin')
-
+	  
       
 
 

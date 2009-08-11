@@ -7,6 +7,8 @@ Replace these with more appropriate tests for your application.
 
 from django.test import TestCase
 from django.test.client import Client
+from usecase01 import AdminDepositsToUserAccountTestCase
+from BeautifulSoup import BeautifulSoup
 
 class SimpleTest(TestCase):
     def test_basic_addition(self):
@@ -24,8 +26,10 @@ class AdminDepositsMoneyInUserAccount(TestCase):
 
     def test_basic_scenario(self):
       self.c.login(username='admin', password='admin')
-
       
+      response = self.c.get('/products/', {'user' : 'user'})
+      doc = BeautifulSoup(response.content)
+      print doc.findAll("form")
 
 
 

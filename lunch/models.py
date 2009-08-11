@@ -1,4 +1,10 @@
 from django.db import models
+from django.contrib import auth
+
+#class UserProfile(models.Model):
+#    user = models.OneToOneField(auth.models.User)
+#    balance = models.DecimalField(max_digits=7, decimal_places=2)
+	
 
 class Product(models.Model):
   name = models.CharField(max_length=70)

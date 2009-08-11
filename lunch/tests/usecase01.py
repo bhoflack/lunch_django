@@ -4,10 +4,12 @@ from django.test.client import Client
 
 
 class AdminDepositsToUserAccountTestCase(TestCase):
-	fixtures = ['testdata.json']
+	fixtures = ['base.json']
 	
 	def setUp(self):
-		# prep
+		# prep`
+		pass 
 		
 	def testMainScenario(self):
-		
+		# do stuff
+		pass
